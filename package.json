@@ -1,0 +1,14 @@
+{
+  "name": "1_task",
+  "version": "1.0.0",
+  "description": "First task of FrontEnd course",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ -recursive"
+  },
+  "author": "TH",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
