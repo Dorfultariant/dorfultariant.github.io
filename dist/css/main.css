@@ -11,7 +11,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: #dadada;
     transition: all 0.4s ease-out; }
   /* line 20, scss/_menu.scss */
   .menu-btn.close {
@@ -52,7 +52,7 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #313235;
+    background: #373737;
     list-style: none;
     transform: translate3d(100%, 0, 0);
     transition: all 0.4s ease-out; }
@@ -61,7 +61,7 @@
       transform: translate3d(0, 0, 0); }
   /* line 83, scss/_menu.scss */
   .menu-branding {
-    background: #424347;
+    background: #494949;
     transition: all 0.4s ease-out;
     transform: translate3d(-100%, 0, 0); }
     /* line 89, scss/_menu.scss */
@@ -71,7 +71,7 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url(/dist/img/portrait-1.png);
+      background: url(/dist/img/portrait_2.png);
       background-position: 50%;
       background-size: 100%;
       border-radius: 50%;
@@ -94,7 +94,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: #dadada;
     text-decoration: none;
     transition: all 0.4s ease-out; }
     /* line 129, scss/_menu.scss */
@@ -117,6 +117,127 @@
 /* line 137, scss/_menu.scss */
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
+
+/* line 5, scss/main.scss */
+* {
+  box-sizing: border-box; }
+
+/* line 9, scss/main.scss */
+body {
+  background: #444;
+  color: #dadada;
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+  /* line 17, scss/_config.scss */
+  body#bg-img {
+    background: url(/dist/img/background_1.png);
+    background-attachment: fixed;
+    background-size: cover; }
+    /* line 22, scss/_config.scss */
+    body#bg-img:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(68, 68, 68, 0.8); }
+
+/* line 19, scss/main.scss */
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
+  /* line 25, scss/main.scss */
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 4rem; }
+  /* line 29, scss/main.scss */
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(73, 73, 73, 0.5); }
+
+/* line 36, scss/main.scss */
+a {
+  color: #fff;
+  text-decoration: none; }
+
+/* line 41, scss/main.scss */
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+/* line 47, scss/main.scss */
+.text-secondary {
+  color: #799bcf; }
+
+/* line 51, scss/main.scss */
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 50px); }
+  /* line 56, scss/main.scss */
+  main .icons {
+    margin-top: 1rem; }
+    /* line 59, scss/main.scss */
+    main .icons a {
+      padding: 0.5rem; }
+      /* line 62, scss/main.scss */
+      main .icons a:hover {
+        color: #799bcf;
+        transition: all 0.4s ease-out; }
+  /* line 69, scss/main.scss */
+  main#home {
+    overflow: hidden; }
+    /* line 72, scss/main.scss */
+    main#home h1 {
+      margin-top: 20vh; }
+
+/* line 78, scss/main.scss */
+.about-info {
+  display: grid;
+  gap: 30px;
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr); }
+  /* line 84, scss/main.scss */
+  .about-info .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 450%;
+    border: #799bcf 3px solid; }
+  /* line 93, scss/main.scss */
+  .about-info .bio {
+    grid-area: bio; }
+  /* line 97, scss/main.scss */
+  .about-info .job-1 {
+    grid-area: job1; }
+  /* line 101, scss/main.scss */
+  .about-info .job-2 {
+    grid-area: job2; }
+  /* line 105, scss/main.scss */
+  .about-info .job-3 {
+    grid-area: job3; }
+  /* line 109, scss/main.scss */
+  .about-info .job {
+    background-color: #515151;
+    padding: 0.5rem;
+    border-bottom: #799bcf 4px solid; }
+
+/* line 116, scss/main.scss */
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #2b2b2b;
+  color: #dadada;
+  height: 50px; }
 
 @media screen and (max-width: 768px) {
   /* line 9, scss/_mobile.scss */
@@ -148,95 +269,16 @@
     transform: translate3d(-100%, 0, 0); }
     /* line 41, scss/_mobile.scss */
     .menu-branding .portrait {
-      background: url(/dist/img/portrait_small.png);
+      background: url(/dist/img/portrait_2.png);
       background-size: 100%;
       width: 150px;
-      height: 150px; } }
+      height: 150px; }
+  /* line 49, scss/_mobile.scss */
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
-  /* line 52, scss/_mobile.scss */
+  /* line 62, scss/_mobile.scss */
   main#home h1 {
     margin-top: 10vh; } }
-
-/* line 6, scss/main.scss */
-* {
-  box-sizing: border-box; }
-
-/* line 10, scss/main.scss */
-body {
-  background: #3d3e42;
-  color: #fff;
-  height: 100%;
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5; }
-  /* line 17, scss/_config.scss */
-  body#bg-img {
-    background: url(/dist/img/background_1.png);
-    background-attachment: fixed;
-    background-size: cover; }
-    /* line 22, scss/_config.scss */
-    body#bg-img:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: rgba(61, 62, 66, 0.8); }
-
-/* line 20, scss/main.scss */
-h1,
-h2,
-h3 {
-  margin: 0;
-  font-weight: 400; }
-  /* line 26, scss/main.scss */
-  h1.lg-heading,
-  h2.lg-heading,
-  h3.lg-heading {
-    font-size: 4rem; }
-  /* line 30, scss/main.scss */
-  h1.sm-heading,
-  h2.sm-heading,
-  h3.sm-heading {
-    margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background: rgba(66, 67, 71, 0.5); }
-
-/* line 37, scss/main.scss */
-a {
-  color: #fff;
-  text-decoration: none; }
-
-/* line 42, scss/main.scss */
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%; }
-
-/* line 48, scss/main.scss */
-.text-secondary {
-  color: #799bcf; }
-
-/* line 52, scss/main.scss */
-main {
-  padding: 4rem;
-  height: 100%; }
-  /* line 56, scss/main.scss */
-  main .icons {
-    margin-top: 1rem; }
-    /* line 59, scss/main.scss */
-    main .icons a {
-      padding: 0.5rem; }
-      /* line 62, scss/main.scss */
-      main .icons a:hover {
-        color: #799bcf;
-        transition: all 0.4s ease-out; }
-  /* line 69, scss/main.scss */
-  main#home {
-    overflow: hidden; }
-    /* line 72, scss/main.scss */
-    main#home h1 {
-      margin-top: 20vh; }

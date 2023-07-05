@@ -1,10 +1,10 @@
-$primary-color: rgb(61, 62, 66);
+$primary-color: #444; // Default: #444
 
 $secondary-color: rgb(121, 155, 207);
 $show-home-image: true;
 $home-image: url(/dist/img/background_1.png);
-$portrait-image: url(/dist/img/portrait-1.png);
-$portrait-image-small: url(/dist/img/portrait_small.png);
+//$portrait-image: url(/dist/img/portrait-1.png);
+$portrait-image-small: url(/dist/img/portrait_2.png);
 $background-opacity: 0.8;
 
 
@@ -32,6 +32,16 @@ $background-opacity: 0.8;
         }
     }
 
+}
+
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #000;
+    }
+
+    @else {
+        @return #dadada;
+    }
 }
 
 @mixin mediaSm {
