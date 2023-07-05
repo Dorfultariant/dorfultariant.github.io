@@ -1,8 +1,16 @@
 // XL screens large desktops
-@include mediaXL {}
+@include mediaXL {
+    .work-info {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 
 // L screens desktops
-@include mediaLg {}
+@include mediaLg {
+    .work-info {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 // M screens tablet small laptop
 @include mediaMd {
@@ -55,11 +63,19 @@
             "job3";
         grid-template-columns: 1fr;
     }
+
+    .work-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 // S screens mobile
 @include mediaSm {
     main#home h1 {
         margin-top: 10vh;
+    }
+
+    .work-info {
+        grid-template-columns: 1fr;
     }
 }

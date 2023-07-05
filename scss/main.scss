@@ -113,6 +113,50 @@ main {
     }
 }
 
+// Work, Projects
+
+.work-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.7rem;
+
+    img {
+        width: 100%;
+        border: solid 5px #fff;
+
+        &:hover {
+            border-color: $secondary-color;
+            opacity: 0.5;
+            @include easeOut;
+        }
+    }
+}
+
+// button styles
+.btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+
+    &:hover {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
+}
+
+.btn-dark {
+    background: darken($primary-color, 40);
+    color: #c7c7c7;
+    @extend .btn;
+}
+
+.btn-light {
+    background: lighten($primary-color, 30);
+    color: #000000;
+    @extend .btn;
+}
+
 #main-footer {
     text-align: center;
     padding: 1rem;
