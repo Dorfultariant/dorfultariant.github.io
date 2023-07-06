@@ -247,27 +247,51 @@ main {
       transition: all 0.4s ease-out; }
 
 /* line 136, scss/main.scss */
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  /* line 143, scss/main.scss */
+  .boxes div {
+    font-size: 2rem;
+    border: solid 3px #fff;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.4s ease-out; }
+    /* line 150, scss/main.scss */
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #799bcf;
+      color: #000; }
+      /* line 155, scss/main.scss */
+      .boxes div:hover span {
+        color: #444;
+        transition: all 0.4s ease-out; }
+
+/* line 166, scss/main.scss */
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem; }
-  /* line 142, scss/main.scss */
+  /* line 172, scss/main.scss */
   .btn:hover, .btn-dark:hover, .btn-light:hover {
     background: #799bcf;
     color: #000; }
 
-/* line 148, scss/main.scss */
+/* line 178, scss/main.scss */
 .btn-dark {
   background: black;
   color: #c7c7c7; }
 
-/* line 154, scss/main.scss */
+/* line 184, scss/main.scss */
 .btn-light {
   background: #919191;
   color: #000000; }
 
-/* line 160, scss/main.scss */
+/* line 190, scss/main.scss */
 #main-footer {
   text-align: center;
   padding: 1rem;
