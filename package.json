@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "First task of FrontEnd course",
   "main": "index.js",
-  "homepage": "https://Dorfultariant.github.io/webpage_portfolio/",
+  "homepage": "https://Dorfultariant.github.io",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ -recursive",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist/"
   },
   "author": "TH",
   "license": "ISC",
