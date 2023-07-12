@@ -1,14 +1,14 @@
 // XL screens large desktops
 @include mediaXL {
     .work-info {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
 }
 
 // L screens desktops
 @include mediaLg {
     .work-info {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -55,6 +55,8 @@
     }
 
     .about-info {
+        // Grid template areas are set to STACKED, 
+        //  so on top of each other NOTE: separated with ""
         grid-template-areas:
             "bioimage"
             "bio"

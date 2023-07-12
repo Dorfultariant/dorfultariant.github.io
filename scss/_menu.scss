@@ -47,13 +47,15 @@
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.8;
     visibility: hidden;
 
+    // selects all the elements with BOTH .menu and .show such as when menubutton is clicked, .show class is
+    // added to the view elements inside <div class="menu">
     &.show {
         visibility: visible;
     }
 
+    // menu-branding, menu-nav classes are both selected
     &-branding,
     &-nav {
         display: flex;
@@ -67,6 +69,7 @@
     }
 
     &-nav {
+        opacity: $background-opacity;
         margin: 0;
         padding: 0;
         background: darken($primary-color, 5);
@@ -81,7 +84,7 @@
     }
 
     &-branding {
-        background: lighten($primary-color, 2);
+        background: rgba(lighten($primary-color, 2), $background-opacity);
         @include easeOut;
         // Slide from left
         transform: translate3d(-100%, 0, 0);
@@ -93,14 +96,15 @@
         .portrait {
             width: 250px;
             height: 250px;
-            background: $portrait-image-small;
+            background-image: $portrait-image-small;
             background-position: 50%;
             background-size: 100%;
             border-radius: 50%;
-            border: solid 2px $secondary-color;
-
+            border: solid 4px $secondary-color;
         }
     }
+
+
 
     .nav-item {
         transform: translate3d(600px, 0, 0);
@@ -133,6 +137,7 @@
     }
 }
 
+// Transition delay for each menu navigation item
 @for $i from 1 through 4 {
     .nav-item:nth-child(#{$i}) {
         transition-delay: $i * 0.1s;

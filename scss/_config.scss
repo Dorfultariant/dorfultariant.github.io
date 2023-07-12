@@ -3,17 +3,13 @@ $primary-color: #444; // Default: #444
 $secondary-color: rgb(121, 155, 207);
 $show-home-image: true;
 $home-image: url(/dist/img/background_1.png);
-//$portrait-image: url(/dist/img/portrait-1.png);
 $portrait-image-small: url(/dist/img/portrait_2.png);
-//$project-image-1: url(/dist/img/projects/project1.png);
-//$project-image-2: url(/dist/img/projects/project2.png);
-//$project-image-3: url(/dist/img/projects/project3.png);
 
 $background-opacity: 0.8;
 
 
 @mixin easeOut {
-    transition: all 0.4s ease-out;
+    transition: all 0.2s ease-out;
 }
 
 @mixin background {
